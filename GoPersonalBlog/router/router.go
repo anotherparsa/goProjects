@@ -3,13 +3,15 @@ package router
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/anotherparsa/goProjects/home"
 )
 
 func Routing(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	switch path {
 	case "/":
-		fmt.Fprint(w, "welcome to home")
+		home.HomePage(w, r)
 	case "/about":
 		fmt.Fprint(w, "welcome to about")
 	}
