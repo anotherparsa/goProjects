@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/anotherparsa/goProjects/admin"
 	"github.com/anotherparsa/goProjects/home"
 )
 
@@ -14,5 +15,7 @@ func Routing(w http.ResponseWriter, r *http.Request) {
 		home.HomePage(w, r)
 	case "/about":
 		fmt.Fprint(w, "welcome to about")
+	case "/admin/loginpage":
+		admin.AdminPageHandler(w, r)
 	}
 }
