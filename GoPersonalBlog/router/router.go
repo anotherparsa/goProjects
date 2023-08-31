@@ -16,6 +16,10 @@ func Routing(w http.ResponseWriter, r *http.Request) {
 	case "/about":
 		fmt.Fprint(w, "welcome to about")
 	case "/admin/loginpage":
-		admin.AdminPageHandler(w, r)
+		admin.AdminLoginPageHandler(w, r)
+	case "/admin/login":
+		admin.AdminLoginHandler(w, r)
+	case "/admin/home":
+		admin.AdminHomePageHandler(w, r)
 	}
 }
