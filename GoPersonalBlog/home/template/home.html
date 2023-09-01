@@ -4,6 +4,21 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>this is the home page</h1>
+    {{range $index, $value := .}}
+
+    <p> {{$index}}</p>
+    <br>
+    <p> {{$value.Title}}</p>
+    <br>
+    <p> {{$value.Text}}</p>
+    <br>
+    <p> {{$value.Author}}</p>
+    <br>
+    <p> {{$value.Category}}</p>
+
+
+
+    {{end}}
+
 </body>
 </html>
